@@ -11,7 +11,15 @@
      Площадь S поверхности цилиндра вычисляется по формуле: S = 2π rh + 2π r 2 = 2π r (r+ h).
      Результаты расчетов выведите на экран.*/
 
+var r = +prompt("Cylinder radius is...");
+var h = +prompt("Culinder height is...");
 
+var n = r+h; // ввел дополнительную переменную для удобства
+var S = 2*Math.PI*r*n;
+var V = Math.PI*r*2*h;
+
+document.write("Your cylinder space is " + S + "<br/>");
+document.write("Your cylinder volume is " + V + "<br/>");
 
 </script>
 </body>
