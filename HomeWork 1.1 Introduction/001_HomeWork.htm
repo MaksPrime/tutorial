@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title></title></head>
+<body><script type="text/javascript">
+    /* Создайте 3 переменные   x = 6, y = 15, и z = 4:
+ Выполните и отобразите результат следующих операций для этих переменных:
+ · x += y - x++ * z ;
+ · z = -- x - y * 5 ;
+ · y /= x + 5 % z ;
+ · z = x++ + y * 5 ;
+ · x = y - x++ * z ; */
+
+    var x = 6;
+    var y = 15;
+    var z = 4;
+
+    x += y - x++ * z ;
+    document.write('Вычисляем X1 = 6 + (15 - (6 *4))'+'<br/>'); // x++ в данном случае постинкремент. X = -3
+    document.write('X1 = '+ x +'<br/>'+'<br/>');
+
+    z = -- x - y * 5 ;
+    document.write('Вычисляем Z1 = (-4)-(15*5)'+'<br/>'); // x = -3 в результате предыдущих вычислений. Z = -79; X = -4
+    document.write('Z1 = '+ z +'<br/>'+'<br/>');
+
+    //Перед следующим шагом сделаем промежуточный расчет:
+    var n = x + 5 % z; // ПОЧЕМУ ((-4) + 5 % (-79)) = 1  ???
+    document.write('n = ' + n + '<br>');
+
+    y /= x + 5 % z ;
+    document.write('Вычисляем Y1 = 15/1' +'<br/>'); // Т.к. (x + 5 % z) = 1. Y = 15; X = -4; Z = -79
+    document.write('Y1 = '+ y +'<br/>'+'<br/>');
+
+    z = x++ + y * 5 ;
+    document.write('Вычисляем Z2 = -4 + 15*5'+'<br/>'); // Z = 71; X = -3: Y = 15
+    document.write('Z2 = '+ z +'<br/>'+'<br/>');
+
+    x = y - x++ * z ;
+    document.write('Вычисляем X2 = (15)-((-3)*71)'+'<br/>'); // X = 228; Z = 71; Y = 15
+    document.write('X2 = '+ x +'<br/>');
+
+</script></body>
+</html>
