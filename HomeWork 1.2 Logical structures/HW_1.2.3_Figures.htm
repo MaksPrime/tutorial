@@ -7,7 +7,7 @@
 <body><script type="text/javascript">
     /*Используя циклы нарисуйте в браузере с помощью пробелов и звездочек:
      - прямоугольник -done
-     - прямоугольный треугольник
+     - прямоугольный треугольник  -done
      - равносторонний треугольник  -done
      - ромб      */
 
@@ -15,6 +15,7 @@
     function doubleSpace () {for (s2=0; s2<2; s2++) {document.write ("&nbsp");}}
 
     //RECTANGLE
+    document.write ("<br>");
     function rectangle () {
         var recWidth = prompt("Enter rectangle width");
         var recHeight = prompt("Enter rectangle height");
@@ -27,7 +28,7 @@
                 for (i=0; i<recWidth-2; i++) {tripleSpace (); doubleSpace ();} tripleSpace ();
                 document.write ("*");                                                                       //element of the right side
                 document.write ("<br>");}
-            for (i=0; i < recWidth; i++) {document.write ("*"); tripleSpace ();}document.write ("<br>");}}//downside of rectangle
+            for (i=0; i < recWidth; i++) {document.write ("*"); tripleSpace ();}document.write ("<br>" + "<hr/>" + "<br>");}}//downside of rectangle
 
     //EQUILATERAL TRIANGLE
     function equilateralTriangle ()
@@ -52,10 +53,21 @@
                 stringNumber++;} while (stringNumber < triangleLenght)
 
             for (i=0; i < triangleLenght; i++)
-            {document.write ("*"); tripleSpace ();document.write ("&nbsp");}document.write ("<br>");}} //downside of triangle
+            {document.write ("*"); tripleSpace ();document.write ("&nbsp");}document.write ("<br><hr/>");}} //downside of triangle
 
     rectangle ();
     equilateralTriangle();
+
+    //Прямоугольный треугольник 
+
+    var s = +prompt ("Введите размер катета прямоугольного треугольника", "Предусмотрен треугольник с равными катетами")
+        for (var i = 0; i < s+1; i++) {
+            for (var j = 0; j < i; j++) {
+                document.write("&nbsp * &nbsp");
+            }
+            document.write("<br/>");
+        }
+        document.write("<hr/><br/>");
 
 </script>
 
