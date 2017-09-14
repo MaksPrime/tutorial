@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body><script type="text/javascript">
+    /*Напишите программу, которая будет рассчитывать и выводить на экран количество возможных вариантов доставки товара.
+    Для решения задачи, используйте факториал N!, рассчитываемый с помощью цикла do-while */
+
+    var counter = prompt("Введите число магазинов", "max 170");
+    var factorial = 1;
+    if (counter == 1) {document.write("Количество возможных доставок в " + counter + " магазин = ");}
+    else if (counter < 5) {document.write("Количество возможных доставок в " + counter + " магазина = ");}
+    else {document.write("Количество возможных доставок в " + counter + " магазинов = ");}
+
+    do {
+
+        if (counter == 0) {
+            factorial = 1;
+            break;
+        }
+
+        factorial = factorial * counter;
+        counter = counter - 1;
+    }
+    while (counter > 0);
+    document.write(factorial);
+
+</script>
+
+</body>
+</html>
