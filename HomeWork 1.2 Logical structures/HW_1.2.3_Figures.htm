@@ -67,8 +67,32 @@
             }
             document.write("<br/>");
         }
-        document.write("<hr/><br/>");
+        document.write("<hr/><br/>"); 
 
+    // Ромб
+var rhombSide = +prompt("Enter side of the rhomb", "Enter an integer not less than 2");
+var start = 1;
+var rhombSide2 = rhombSide;
+
+    do {
+for (i = 0; i < rhombSide; i++) {document.write("&nbsp&nbsp&nbsp");}
+for (j = 0; j < start; j++) {document.write ("*&nbsp");}
+    start = start + 2;
+    rhombSide = rhombSide - 1;
+    document.write ("<br>");    }
+    while (rhombSide > 0);
+
+start = start - 2;
+rhombSide = rhombSide + 1;
+
+     do {
+start = start - 2;
+rhombSide = rhombSide + 1;
+for (i = 0; i < rhombSide; i++) {document.write("&nbsp&nbsp&nbsp");}
+for (j = 0; j < start; j++) {document.write ("*&nbsp");}
+    document.write ("<br>");    }
+    while (rhombSide < rhombSide2);
+ 
 </script>
 
 </body>
