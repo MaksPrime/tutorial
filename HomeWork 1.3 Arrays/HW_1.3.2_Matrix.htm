@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+        <script type="text/javascript">
+
+/* Требуется: Создать двумерный массив элементов размерностью 5х5 и заполнить его произвольными целочисленными значениями.
+По главной диагонали все числа со знаком (-) заменить на 0, а числа со знаком (+) на число 1. */
+
+var max = +prompt('Задайте максимальное значение аргумента массива');
+
+var table = new Array (5);
+for (i = 0; i < table.length; i++) {
+    table [i] = new Array (5);}
+
+for (var row = 0; row < table.length; row++) {
+    for (var col = 0; col < table[row].length; col++) {
+    var r = Math.round(Math.random()*max);  //Генерирует случайное число и приводит его к целочисленному значению в заданном диапазоне
+    table [row][col] = r;}}  //Присваивает сгенерированное значение одной из ячеек массива
+
+    col = 0;  //Обнуляем счетчик колонок. Счетчик строк обнулим на следующем шаге.
+
+for (row = 0; row < table.length; row++) {
+    table [row][col] = table [row][col]*(-1);
+    col += 1;}
+
+var finish = table.join("<br/>");  //Приводим к табличному виду
+document.write(finish);
+
+        </script>
+
+</head>
+<body>
+
+</body>
+</html>
