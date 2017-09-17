@@ -10,7 +10,41 @@
 </head>
 <body><script type="text/javascript">
 
-        
+    var a = +prompt("Введите число");
+
+    function NumberAnalisis (a) {
+    var simple;
+
+    if (a != 0) {
+
+    var message = (a < 0) ? 'Введенное число отрицательное.' : 'Введенное число положительное.';
+    document.write(message);
+
+    if (a == 1 || a == (-1)) {simple = '<br/> Не является ни простым ни составным.'}
+    else if (a != 2 && a != (-2)){
+        var i = 1;
+        do {
+        i++;
+        var n = a % i;
+        } while (n!=0); // Проверяем, делится ли а на какое-либо число, кроме 1 и а
+        simple = (i == a) ? '<br/> Простое.' : '<br/> Составное.'
+    } else {simple = '<br/> Простое.'}
+
+    document.write(simple);
+
+    var arr = [];
+    if (a % 2 == 0) {arr.push(2);}
+    if (a % 5 == 0) {arr.push(5);}
+    if (a % 3 == 0) {arr.push(3);}
+    if (a % 6 == 0) {arr.push(6);}
+    if (a % 9 == 0) {arr.push(9);}
+    if (arr.length > 0) {
+    document.write('<br/> Делится без остатка на: '  + arr + '.');}
+
+
+    } else {document.write('Введено число 0');}}
+
+    NumberAnalisis (a);
 
     </script>
 </body>
