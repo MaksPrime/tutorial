@@ -10,7 +10,29 @@
 </head>
 <body><script type="text/javascript">
 
+var Doc = {
+    Header: "Заголовок документа",
+    Body: "Тело документа",
+    Footer: "Футер документа",
+    Date: "Дата создания документа",
 
+    App: {Header: "Name",Body: "Text", Footer: "Served"},
+
+    edit: function () {
+        Doc.App.Header = prompt("Введите заголовок");
+        Doc.App.Body = prompt("Введите описание");
+        Doc.App.Footer = prompt("Введите подпись");
+    },
+
+    show: function () {
+        document.write(Doc.App.Header + "<br/>");
+        document.write(Doc.App.Body + "<br/>");
+        document.write(Doc.App.Footer + "<br/>");
+    }
+};
+
+Doc.edit();
+Doc.show();
 
 </script>
 
