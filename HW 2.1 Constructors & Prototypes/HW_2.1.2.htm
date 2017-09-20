@@ -3,10 +3,37 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
-    <!-- Создайте функцию конструктор, которая создает объект со свойством экземпляра, свойством функции-конструктора, с методом экземпляра и методом функции-конструктора имена выберите произвольно.   -->
+    <!-- Создайте функцию конструктор, которая создает объект со свойством экземпляра,
+    свойством функции-конструктора, с методом экземпляра и методом функции-конструктора имена выберите произвольно.   -->
 </head>
 <body> <script type="text/javascript">
 
+function Constr (a, b) {
+//Свойства экземпляра:    
+    this.a = a;
+    this.b = b;
+//Метод экземпляра:
+    this.sum = function () {return this.a + this.b;}
+}
+
+//Свойство функции-конструктора:
+    Constr.c = 100;
+
+//Метод функции конструктора:
+    Constr.div = function () {return a + b + c;}
+
+    var exemplar = new Constr(10, 20);
+
+document.write(exemplar.a);
+document.write('<hr/>');
+document.write(exemplar.b);
+document.write('<hr/>');
+document.write(exemplar.sum());
+document.write('<hr/>');
+document.write(Constr.c);
+document.write('<hr/>');
+document.write(exemplar.c);
+document.write('<hr/>');
 
 
 </script>

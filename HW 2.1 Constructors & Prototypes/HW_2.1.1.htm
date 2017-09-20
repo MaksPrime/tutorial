@@ -3,11 +3,40 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
-    <!-- Создайте функцию-конструктор Box(коробка) для создания объекта со свойствами Height(высота), Width(ширина), Depth(глубина) и Material(материал). Также в объекте должны быть методы Volume - для получения объема и equals() – для сравнения объектов, объекты должны считаться равными если содержат одинаковые значения в свойстве Material.  -->
+    <!-- Создайте функцию-конструктор Box(коробка) для создания объекта со свойствами Height(высота),
+    Width(ширина), Depth(глубина) и Material(материал).
+    Также в объекте должны быть методы Volume - для получения объема и equals() –
+    для сравнения объектов, объекты должны считаться равными если содержат одинаковые значения в свойстве Material.  -->
 </head>
 <body> <script type="text/javascript">
 
+function Box (name, heigth, width, depth, material) {
+    this.name = name;
+    this.heigth = heigth;
+    this.width = width;
+    this.depth = depth;
+    this.material = material;
 
+        this.volume = function () {
+        document.write("<br/> Volume of " + name + ' is '+ this.heigth*this.width*this.depth); } //получение объема коробки
+
+        this.equals = function (otherObject) {
+            return this.material === otherObject.material;} //сравнение материалов коробок
+    }
+
+// Создаем три экземпляра класса Box
+var box1 = new Box ('box1', 20, 10, 5, 'steel');
+var box2 = new Box ('box2', 50,20,20, 'wood');
+var box3 = new Box ('box3', 16, 10, 10, 'steel');
+
+//Выводим размеры коробок на экран
+box1.volume ();
+box2.volume ();
+box3.volume ();
+document.write('<hr/>');
+//Сравниваем материалы c первой коробкой
+document.write('<br/>' + box1.name + ' is equal to ' + box2.name + ' - ' + box1.equals(box2));
+document.write('<br/>' + box1.name + ' is equal to ' + box3.name + ' - ' + box1.equals(box3));
 
 </script>
 </body>
