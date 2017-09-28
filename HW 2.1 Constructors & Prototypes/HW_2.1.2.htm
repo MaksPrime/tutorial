@@ -20,21 +20,23 @@ function Constr (a, b) {
     Constr.c = 100;
 
 //Метод функции конструктора:
-    Constr.div = function () {return a + b + c;}
+    Constr.getOrigin = function () {return new Constr(0, 1)} //в этом случае this не используется
 
     var exemplar = new Constr(10, 20);
 
-document.write(exemplar.a);
+document.write(exemplar.a); // выводим свойство "а" экземпляра
 document.write('<hr/>');
-document.write(exemplar.b);
+document.write(exemplar.b); // выводим свойство "b" экземпляра
 document.write('<hr/>');
-document.write(exemplar.sum());
+document.write(exemplar.sum()); // выводим результат работы метода экземпляра
 document.write('<hr/>');
-document.write(Constr.c);
+document.write(Constr.c); // выводим свойство функции-конструктора
 document.write('<hr/>');
-document.write(exemplar.c);
+document.write(exemplar.hasOwnProperty('c')); //проверяем, что последнее свойство не является свойством экземпляра
 document.write('<hr/>');
-
+document.write(("c" in exemplar)); // и не является свойством прототипа
+document.write('<hr/>');
+document.write(Constr.getOrigin().sum());
 
 </script>
 </body>

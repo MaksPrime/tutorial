@@ -3,10 +3,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
-    <!-- Разработайте функцию-конструктор, которая будет создавать объект Human(человек) создайте массив объектов и реализуйте функцию, которая будет сортировать элементы массива по значению свойства Age по возрастанию или по убыванию.  -->
+    <!-- Разработайте функцию-конструктор, которая будет создавать объект Human(человек)
+    создайте массив объектов и реализуйте функцию,
+    которая будет сортировать элементы массива по значению свойства Age по возрастанию или по убыванию.  -->
 </head>
 <body> <script type="text/javascript">
 
+function Human (name, age) {
+    this.name = name;
+    this.age = age;
+
+}
+
+var People = {}; //создаем пустой объект, который будет хранить экземпляры созданные с помощью констр-ра Human
+
+    var Petya = new Human('Petya', 25);
+    People [0] = Petya;
+    var Vasya = new Human('Vasya', 45);
+    People [1] = Vasya;
+    var Eldar = new Human('Eldar', 30);
+    People [2] = Eldar;
+    var Anton = new Human('Anton', 33);
+    People [3] = Anton;
+
+    //document.write(People[0].age);
+    document.write(People[0].name);
+    document.write('<br/>');
+    document.write(People[3].age);
+document.write('<br/>');
+//People.sort(function (a, b) {return a.age - b.age;});
+//document.write();
 
 
 </script>
