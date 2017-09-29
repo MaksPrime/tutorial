@@ -7,6 +7,37 @@
 </head>
 <body> <script type="text/javascript">
 
+function Cylinder (r, h) {
+ this.r = r;
+ this.h = h;
+ }
+Cylinder.prototype.valueOf = function () {
+    return this.r*this.r*this.h*Math.PI^0;}
+
+var a = +prompt('Введите радиус цилиндра');
+var b = +prompt('Введите высоту цилиндра');
+var res = new Cylinder(a, b);
+
+document.write("Результат расчетов: <br/>" + res + "<br/>"); //здесь вызвался метод valueOf, хотя прямого обращения к нему не было
+document.write(res.toString() + " - метод toString не задан, но с его помощью можем проверить тип объекта<br/>");
+
+Cylinder.prototype.toString = function () {
+    return 'Объем цилиндра ' + this.valueOf();}
+
+document.write(res.toString() + " - а на этой строке метод уже определен и выводит строковое значение <hr/>"); //
+
+var dt = new Date();
+document.write("Теперь работаем с объектом Date: <br/>")
+document.write(dt.toString() + " - результат работы метода toString<hr/>") //вызываем функцию toString.Она определена для этого типа объектов по умолчанию
+
+var Ar = new Array(a, b);
+document.write("Метод toString для массива: " + Ar.toString() + '<hr/>');
+
+var str = new String ('Объект типа String <br/>');
+document.write(str.toString());
+
+var ob = new Object();
+
 
 
 </script>

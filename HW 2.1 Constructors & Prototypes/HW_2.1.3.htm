@@ -8,31 +8,26 @@
     которая будет сортировать элементы массива по значению свойства Age по возрастанию или по убыванию.  -->
 </head>
 <body> <script type="text/javascript">
-
+    //создаем функцию-конструктор
 function Human (name, age) {
     this.name = name;
-    this.age = age;
+    this.age = age; }
+    //создаем пустой массив и наполняем его объектами
+var People = new Array ();
+People [0] = new Human('Petya', 25);
+People [1] = new Human('Vasya', 45);
+People [2] = new Human('Eldar', 30);
+People [3] = new Human('Anton', 33);
+var people = JSON.stringify(People);
+document.write("Массив до сортировки: " + people + '<hr/>');
 
-}
+People.sort(function (a, b) {return b.age - a.age;});
+var people = JSON.stringify(People);
+document.write("Массив после сортировки по убыванию: " + people + '<hr/>');
 
-var People = {}; //создаем пустой объект, который будет хранить экземпляры созданные с помощью констр-ра Human
-
-    var Petya = new Human('Petya', 25);
-    People [0] = Petya;
-    var Vasya = new Human('Vasya', 45);
-    People [1] = Vasya;
-    var Eldar = new Human('Eldar', 30);
-    People [2] = Eldar;
-    var Anton = new Human('Anton', 33);
-    People [3] = Anton;
-
-    //document.write(People[0].age);
-    document.write(People[0].name);
-    document.write('<br/>');
-    document.write(People[3].age);
-document.write('<br/>');
-//People.sort(function (a, b) {return a.age - b.age;});
-//document.write();
+People.sort(function (a, b) {return a.age - b.age;});
+var people = JSON.stringify(People);
+document.write("Массив после сортировки по возрастанию: " + people + '<hr/>');
 
 
 </script>
