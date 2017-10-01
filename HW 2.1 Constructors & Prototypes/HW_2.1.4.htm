@@ -9,7 +9,40 @@
 </head>
 <body> <script type="text/javascript">
 
+    function Human(name) {
+        this.name = name;
+        this.talk = function () {
+            document.write("Hello My Name is " + this.name + "<br />")
+        }
+    }
+    // производная функция конструктор
+    function Student(name) {
+        this.name = name;
+        this.school = "CBS school";    }
 
+    function Worker(name) {
+        this.name = name;
+        this.speciality = "Software developer";
+        this.talk = function () { document.write("Привет мое имя " + this.name + "<br />") }
+    }
+
+    // Создаем экземпляр родителя
+    var human = new Human("name");
+
+    // наследуем Student и Worker от Human устанавливая функцию как прототип.
+    Student.prototype = human;
+    Worker.prototype = human;
+
+    var Alex = new Student("Alexander");
+    var Andrew = new Worker("Andrew");
+
+    document.write("<br />Student:<br />");
+    Alex.talk();
+    document.write(Alex.school);
+
+    document.write("<hr />Worker:<br />");
+    Andrew.talk();
+    document.write(Andrew.speciality);
 
 </script>
 </body>
