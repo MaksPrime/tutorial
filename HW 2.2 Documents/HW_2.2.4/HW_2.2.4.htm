@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <!-- Создайте страницу, разместите на странице в произвольном порядке несколько параграфов,
+    ссылок и элемент Div c id=test_div. Разместите на странице три кнопки – «выбрать все параграфы»,
+    «выбрать все ссылки», «выбрать DIV». При нажатии на каждую кнопку должна запускаться функция обработчик,
+    которая добавит рамку определенного цвета на соответствующие элементы.
+    Сделайте код JS ненавязчивым.   -->
+</head>
+<body>
+
+<p> Paragraph 1 </p>
+<p> Paragraph 2 </p>
+<p> Paragraph 3 - Ссылки: <br/>
+    <a href="https:/www.google.com"> Ссылка 1</a> <br/>
+    <a href="https:/www.ecostelya.com"> Ссылка 2</a></p>
+
+<div id="test_div">
+    Блок DIV
+    <a href="https:/www.youtube.com"> Ссылка внутри элемента div</a> </div><br/>
+
+<input type="button" value="выбрать все параграфы" onclick="Select.par()"/>
+<input type="button" value="выбрать все ссылки"/>
+<input type="button" value="выбрать DIV"/>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
