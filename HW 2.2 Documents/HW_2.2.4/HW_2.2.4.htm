@@ -11,19 +11,20 @@
 </head>
 <body>
 
-<p> Paragraph 1 </p>
-<p> Paragraph 2 </p>
-<p> Paragraph 3 - Ссылки: <br/>
-    <a href="https:/www.google.com"> Ссылка 1</a> <br/>
-    <a href="https:/www.ecostelya.com"> Ссылка 2</a></p>
+<p class="content"> Paragraph 1 </p>
+<p class="content"> Paragraph 2 </p>
+<p class="content"> Paragraph 3 - Ссылки: <br/>
+    <a class="content" href="https:/www.google.com"> Ссылка 1</a> <br/>
+    <a class="content" href="https:/www.ecostelya.com"> Ссылка 2</a></p>
 
-<div id="test_div">
+<div class="content" id="test_div">
     Блок DIV
-    <a href="https:/www.youtube.com"> Ссылка внутри элемента div</a> </div><br/>
+    <a class="content" href="https:/www.youtube.com"> Ссылка внутри элемента div</a> </div><br/>
 
-<input id= "firstInp" type="button" value="выбрать все параграфы" onclick="Select.par()"/>
-<input type="button" value="выбрать все ссылки" onclick="Select.hrs()"/>
-<input type="button" value="выбрать DIV" onclick="Select.block()"/>
+<input id="firstInp" type="button" value="выбрать все параграфы"/>
+<input id="secondInp" type="button" value="выбрать все ссылки" />
+<input id="thirdInp" type="button" value="выбрать DIV"/>
+<input id="reset" type="button" value="RESET ALL"/>
 
 <script type="text/javascript" src="script.js"></script>
 </body>
