@@ -27,3 +27,19 @@ paragraph.add = function () {
     }
 }
 document.getElementById("button").onclick = paragraph.add;
+
+//Альтернативное решение:
+paragraph.add2 = function () {
+    var div = document.getElementById('div');
+    var button = document.getElementById('button');
+    var par = document.createElement("p");
+
+    par.innerHTML = "Параграф";
+    if (div.children.length == 10) {
+        while(div.firstChild) {
+            div.removeChild(div.firstChild)
+        }
+        return;        }
+    div.appendChild(par);
+}
+// document.getElementById("button").onclick = paragraph.add2;

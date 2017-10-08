@@ -6,11 +6,22 @@
     <!-- Разработайте модуль, который будет содержать функцию для получения элементов на странице с определенным значением
     в атрибуте с именем class. Пример использование модуля.
     var arr = MyQuery.FindClass(“redButton”); - возвращает массив элементов с атрибутом class=”redButton”   -->
+    <style type="text/css">
+        .redButton {color: red;}
+    </style>
 </head>
-<body> <script type="text/javascript">
+<body>
 
+    <p class="class1">Блок 1</p>
+    <div class="redButton">Параграф 1</div>
+    <p class="class2">Блок 2</p>
+    <div class="redButton">Параграф 2</div>
+    <p class="class3">Блок 3</p>
+    <div class="redButton">Параграф 3</div>
 
-
-</script>
+<br/>
+<button id="button" class="redButton">Кнопка</button>
+    <!--<script src="constructor.js"></script>-->
+    <script src="module.js"></script>
 </body>
 </html>
