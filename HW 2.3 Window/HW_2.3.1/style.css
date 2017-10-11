@@ -1,7 +1,11 @@
 #timer {
-    font-size: 200%;
+    font-size: 250%;
     text-align: center;
 }
 #buttons {
     text-align: center;
+}
+#seconds {
+    !important;
+    font-size: 50%;
 }
